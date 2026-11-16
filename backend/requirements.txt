@@ -1,0 +1,13 @@
+﻿fastapi
+uvicorn[standard]
+pydantic-settings
+sqlalchemy[asyncio]
+alembic
+psycopg[binary]
+pytest
+httpx
+
+pwdlib[argon2]
+
+PyJWT>=2.15,<3
+kotakneoapi>=3.0.13,<4.0
