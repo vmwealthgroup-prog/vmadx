@@ -1,8 +1,9 @@
-﻿from contextlib import asynccontextmanager
+from contextlib import asynccontextmanager
 
 from fastapi import FastAPI
 
 from backend.app.api.auth import router as auth_router
+from backend.app.api.strategy import router as strategy_router
 from backend.app.core.config import settings
 from backend.app.db.session import close_db
 
@@ -20,6 +21,7 @@ app = FastAPI(
 )
 
 app.include_router(auth_router)
+app.include_router(strategy_router)
 
 
 @app.get("/health")
